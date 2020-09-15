@@ -23,7 +23,7 @@ namespace DemoADO
                 cmd.Connection = con;
                 con.Open();
                 int RowsAffected = cmd.ExecuteNonQuery();
-                Response.Write("Rows Inserted = " + RowsAffected);
+                LabelMessage.Text = "Rows Inserted " + RowsAffected;
 
                 cmd = new SqlCommand("Select * from Employee_Tbl", con);
                 SqlDataReader rdr = cmd.ExecuteReader();
